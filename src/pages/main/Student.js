@@ -9,15 +9,7 @@ const Student = ({ name, id, status,time }) => {
         <div>
             <ul className="list-wrap">
                 <li>
-                    {/*<span className="status deposit"*/}
-                    {/*      style={{*/}
-                    {/*          textDecoration: isHere ? 'line-through' : 'none',*/}
-                    {/*          color: isHere ? 'gray' : 'black',*/}
-                    {/*          cursor: 'pointer',*/}
-                    {/*      }}*/}
-                    {/*      onClick={() => dispatch(markStudent(id))}*/}
 
-                    {/*>출석</span>*/}
 
                     <span className={`status-badge ${status}`}>
                     {status}
