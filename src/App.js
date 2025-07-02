@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import React from "react"
 import './App.css';
+import { Routes , Route, Link } from "react-router-dom"
+import { NotFoundMetadata } from "./pages/notFound/NotFoundMetadata.js"
+import publicRoutes from "./router/routes.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Routes>
+            <Route
+                exact
+                path="/*"
+                name="Page 404"
+                element={<NotFoundMetadata/>}
+            />
+            {publicRoutes.map((route, idx) => {
+                return (
+                    route.component && (
+                        <Route
+                            key={idx}
+                            path={route.path}
+                            exact={route.exact}
+                            name={route.name}
+                            element={
+                                <route.component  />
+                            }
+                        />
+                    )
+                )
+            })}
+        </Routes>
+
     </div>
   );
 }
