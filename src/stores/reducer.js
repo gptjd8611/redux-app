@@ -38,6 +38,7 @@ export const moneyReducer = (state = initialState, action) => {
             };
         }
 
+
         case DELETE_TRANSACTION: {
             const deletedTx = state.transactions.find(tx => tx.id === action.payload);
             if (!deletedTx) return state;
@@ -50,7 +51,7 @@ export const moneyReducer = (state = initialState, action) => {
             return {
                 ...state,
                 money: updatedMoney,
-                transactions: state.transactions.filter(tx => tx.id !== action.payload),
+                transactions: state.transactions.filter(tx => tx.id !== action.payload) // ✅ .id 제거
             };
         }
 

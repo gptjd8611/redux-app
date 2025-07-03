@@ -13,15 +13,18 @@ const StudentList = () => {
     //Redux 액션 호출 준비(액션을 Redux로 보내기 위한 함수)
     const dispatch = useDispatch();
 
+
     const [searchTerm, setSearchTerm] = useState('');
     const [statusFilter, setStatusFilter] = useState('전체'); // 전체, 출석, 지각, 결석
 
+    //학생 필터
     const filteredStudents = students.filter((student) => {
         const nameMatch = student.name.includes(searchTerm);
         const statusMatch = statusFilter === '전체' || student.status === statusFilter;
         return nameMatch && statusMatch;
     });
 
+    // 학생 토탈
     const total = students.length;
     const attend = students.filter((s) => s.status === '출석').length;
     const late = students.filter((s) => s.status === '지각').length;
@@ -32,6 +35,7 @@ const StudentList = () => {
 
     return (
         <div className="container">
+            <h2 className="b-tit">학생 출석부</h2>
             <div className="flex-box">
 
                 <p className="s-tit">총 학생수: <strong>{studentsInfo.count}</strong></p>

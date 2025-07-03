@@ -38,15 +38,16 @@ export const ReducerExView = () => {
         return true; // 'all'
     });
 
-    const deleteTransaction = ()=>{
+    const handleDeleteTransaction = (id) => {
         if (window.confirm('정말 삭제하시겠습니까?')) {
-            dispatch(deleteTransaction(tx.id));
+            dispatch(deleteTransaction(id));
         }
-    }
+    };
 
 
     return (
         <div className="container">
+            <h2 className="b-tit">입출금 가계부</h2>
             <h2 className="s-tit">현재 잔고: <strong>{money}</strong>원</h2>
             <div className="flex-box">
             <input
@@ -86,9 +87,8 @@ export const ReducerExView = () => {
                     <option value="month">이번 달</option>
                 </select>
                 </div>
-
                 <ul className="list-wrap">
-                    {transactions.length === 0 ? (
+                    {filteredTransactions.length === 0 ? (
                         <div className="no-data">
                             <p>현재 거래내역이 없습니다.</p>
                         </div>
@@ -107,13 +107,13 @@ export const ReducerExView = () => {
 
                                 <button
                                     className="btn-del"
-                                    onClick={deleteTransaction}
+                                    onClick={() => handleDeleteTransaction(tx.id)}
                                 >
                                     삭제
                                 </button>
                             </li>
-                    ))
-                        )}
+                        ))
+                    )}
                 </ul>
             </div>
             {/*<div className="list-box">*/}

@@ -3,7 +3,7 @@
   max-width:790px;
   width: 100%;
   margin: 0 auto;
-  padding: 10rem 0;
+  padding: 6rem 0;
 }
 .flex-box{gap:1rem;
   display: flex;justify-content: space-between;align-items: center;
@@ -28,6 +28,12 @@
   font-weight: 600;
   background: #fff;
   color:$minus-color; }
+.b-tit{
+  margin-bottom: 6rem;text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #222;
+}
 .s-tit{
   margin-bottom: 2rem;
   font-size: 2rem;

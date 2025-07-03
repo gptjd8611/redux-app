@@ -17,7 +17,7 @@ const ProjectLinks = () => {
                 <p className="project-card-ico"><img src={Bank} alt=""/></p>
 
                 <h3 className="project-card-tit"> 입출금 가계부</h3>
-                <p className="project-card-desc">잔고 관리, 거래 내역, 통계까지 지원하는 간단한 Redux 기반 가계부 기능입니다.</p>                <img src={Bank} alt=""/>
+                <p className="project-card-desc">잔고 관리, 거래 내역, 통계까지 지원하는 간단한 Redux 기반 가계부 기능입니다.</p>
 
             </Link>
             </div>
