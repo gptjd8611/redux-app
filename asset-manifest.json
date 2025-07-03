@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/redux-app/static/css/main.fb04f192.css",
-    "main.js": "/redux-app/static/js/main.cfb04622.js",
+    "main.css": "/redux-app/static/css/main.55c53e46.css",
+    "main.js": "/redux-app/static/js/main.6d27699e.js",
     "static/js/787.f20a9da1.chunk.js": "/redux-app/static/js/787.f20a9da1.chunk.js",
     "static/media/bank.svg": "/redux-app/static/media/bank.157125c4e4e9f802d4e30577c7d813a4.svg",
     "static/media/student.svg": "/redux-app/static/media/student.a291190ac1739061c1b92f264cc08f89.svg",
     "index.html": "/redux-app/index.html",
-    "main.fb04f192.css.map": "/redux-app/static/css/main.fb04f192.css.map",
-    "main.cfb04622.js.map": "/redux-app/static/js/main.cfb04622.js.map",
+    "main.55c53e46.css.map": "/redux-app/static/css/main.55c53e46.css.map",
+    "main.6d27699e.js.map": "/redux-app/static/js/main.6d27699e.js.map",
     "787.f20a9da1.chunk.js.map": "/redux-app/static/js/787.f20a9da1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb04f192.css",
-    "static/js/main.cfb04622.js"
+    "static/css/main.55c53e46.css",
+    "static/js/main.6d27699e.js"
   ]
 }
